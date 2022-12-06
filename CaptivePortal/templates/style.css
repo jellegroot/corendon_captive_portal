@@ -1,0 +1,23 @@
+.page_title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*body color*/
+body#landing {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: red;
+}
+
+/*header_landing*/
+h1{
+    text-align: center;
+    background-color:white;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*contianer positioning*/
+#container{
+    text-align: center;
+}
