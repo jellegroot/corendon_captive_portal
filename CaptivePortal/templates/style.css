@@ -49,3 +49,10 @@ h1{
     background-color: #aa0404;
     color: white;
   }
+
+
+/*landing tekst positioning*/
+#landing_tekst{
+    text-align: center;
+}
+
