@@ -1,18 +1,22 @@
-<link rel="stylesheet" type="text/css" href="style.css" />
 <!DOCTYPE html>
 <html>
     <head>
         <title class="page_title">home</title>
+
+        <!--Relation with CSS file-->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', 
+        filename= 'style.css')}}"/>
+        
         <!--Navigation bar-->
         <div class="topnav">
-            <a class="active" href="Landingpage.html">Home</a>
-            <a href="Multimediapage_disconnected.html">Multimedia</a>
+            <a class="active" href="{{url_for('landing.landingpage')}}">Home</a>
+            <a href="{{url_for('mediapage_disconnected.media_disco')}}">Multimedia</a>
             <h1 id="header_landing">Corendon</h1>
         </div>
     </head>
     <body id="Landing">
         <div id="container">
-            <form method="POST" action="Homepage.html">
+            <form method="POST" action="{{url_for('homepage.home')}}">
                 <label for="uSeatnumber">Seatnumber</b></label>
                 <input type="text" placeholder="Seatnumber" name="uSeatnumber" ><br>
                 <label for="u"><b>Last Name</b></label>
