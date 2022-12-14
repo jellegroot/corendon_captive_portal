@@ -2,9 +2,9 @@ IPTABLES=/sbin/iptables
 
 
 
+
 $IPTABLES -t nat -A PREROUTING -m mark --mark 99 -p tcp --dport 80 -j DNAT --to-destination 192.168.4.1
-$IPTABLES -t filter -A INPUT -p udp --dport 80 -j ACCEPT
-$IPTABLES -t filter -A INPUT -p tcp --dport 443 -j ACCEPT
+$IPTABLES -t filter -A INPUT -p tcp -m multiport --dports 80,443 -j ACCEPT
 $IPTABLES -t filter -A INPUT -p udp --dport 53 -j ACCEPT
 $IPTABLES -t filter -A INPUT -m mark --mark 99 -j DROP
 
