@@ -16,11 +16,11 @@
     </head>
     <body id="Landing">
         <div id="container">
-            <form method="POST" action="{{url_for('homepage.home')}}">
+            <form method="POST">
                 <label for="uSeatnumber">Seatnumber</b></label>
-                <input type="text" placeholder="Seatnumber" name="uSeatnumber" ><br>
-                <label for="u"><b>Last Name</b></label>
-                <input type="text" placeholder="Last Name" name="uLastName" >
+                <input type="text" placeholder="Seatnumber" name="uSeatnumber" required><br>
+                <label for="uLastName"><b>Last Name</b></label>
+                <input type="text" placeholder="Last Name" name="uLastName" required>
                 <p></p><input type="submit" placeholder="Login" name="ulogin">
             </form>
          </div>
