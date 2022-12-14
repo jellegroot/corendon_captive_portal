@@ -6,23 +6,38 @@
         <!--Relation with CSS file-->
         <link rel="stylesheet" type="text/css" href="{{url_for('static', 
         filename= 'style.css')}}"/>
-        
-        <!--Navigation bar-->
-        <div class="topnav">
-            <a class="active" href="{{url_for('landing.landingpage')}}">Home</a>
-            <a href="{{url_for('mediapage_disconnected.media_disco')}}">Multimedia</a>
-            <h1 id="header_landing">Corendon</h1>
-        </div>
+              
     </head>
-    <body id="Landing">
-        <div id="container">
-            <form method="POST">
-                <label for="uSeatnumber">Seatnumber</b></label>
-                <input type="text" placeholder="Seatnumber" name="uSeatnumber" required><br>
-                <label for="uLastName"><b>Last Name</b></label>
-                <input type="text" placeholder="Last Name" name="uLastName" required>
-                <p></p><input type="submit" placeholder="Login" name="ulogin">
-            </form>
+    <body>
+        <!--Navigation bar-->
+        <nav>
+            <div class="logo">
+                <p>Corendon</p>
+            </div>
+            <ul>
+                <li><a href="" class="active">home</a></li>
+                <li><a href="">media</a></li>             
+            </ul>
+        </nav>
+        
+        <!--Login Form-->
+        <div class="container">
+            <div class="header">
+                <h1>login</h1>
+            </div>
+            <div class="main">
+                <form method="POST">
+                    <span>
+                        <input type="text" placeholder="Seatnumber" name="" required>
+                    </span><br>
+                    <span>
+                        <input type="text" placeholder="Last Name" name="" required>
+                    </span><br>
+                    <span>
+                        <button>Login</button>
+                    </span>
+                </form>
+            </div>
          </div>
         
         
