@@ -5,6 +5,10 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
+current_location=$(pwd)
+config_location=$(pwd)/InstallationFiles/config
+
+
 # IP config for interfaces
 sudo cat $config_location/interfaces.txt >> /etc/network/interfaces
 
