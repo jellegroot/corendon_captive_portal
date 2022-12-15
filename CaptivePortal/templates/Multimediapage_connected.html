@@ -8,10 +8,17 @@
         filename= 'style.css')}}"/> 
     </head>
     
-    <body id="Landing">
-        <div header_landing>
-            <h1 id="header_landing">Corendon</h1>
-        </div>
+    <body>
+        <!--Navigation bar-->
+        <nav>
+            <div class="logo">
+                <p>Corendon</p>
+            </div>
+            <ul>
+                <li><a href="{{url_for('homepage.home')}}">home</a></li>
+                <li><a href="" class="active">media</a></li>             
+            </ul>
+        </nav>
         
      
 
