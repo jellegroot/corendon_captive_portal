@@ -55,6 +55,6 @@ sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptiveP
 
 
 export FLASK_APP=__init__.py
-python3 main.py
+flask run --host=0.0.0.0
 
 
