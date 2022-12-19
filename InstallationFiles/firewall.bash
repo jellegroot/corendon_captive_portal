@@ -19,16 +19,10 @@ $IPTABLES -t filter -A INPUT -p udp --dport 53 -j ACCEPT
 $IPTABLES -t filter -A INPUT -m mark --mark 99 -j DROP
 
 
+$IPTABLES -t nat -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT  --to-destination  192.168.4.1:80
+$IPTABLES -t nat -A PREROUTING -i wlan0 -p tcp --dport 443 -j DNAT --to-destination  192.168.X.X:443
+$IPTABLES -t nat -A POSTROUTING -j MASQUERADE
 
 
-
-
-echo "1" > /proc/sys/net/ipv4/ip_forward
-
-$IPTABLES -A FORWARD -i eth0 -o wlan0 -m state --state ESTABLISHED, RELATED -j ACCEPT
-
-$IPTABLES -A FORWARD -m mark --mark 99 -j REJECT
-$IPTABLES -A FORWARD -i wlan0 -o eth0 -j ACCEPT
-$IPTABLES -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 
