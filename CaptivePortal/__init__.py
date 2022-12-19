@@ -1,8 +1,11 @@
 from flask import Flask
 
+app = Flask(__name__)
+@app.route('/')
+app.config['SECRET_KEY'] ='key'
 def create_app():
-    app = Flask(__name__)
-    app.config['SECRET_KEY'] ='key'
+    
+    
 
     from .homepage import homepage
     from .landingpage import landing
