@@ -13,6 +13,7 @@ sudo mkdir odroid
 cd odroid/
 sudo apt install python3-venv -y
 
+
 #make venv directory and install activate_this.py from gitlab
 sudo python3 -m venv venv
 cd venv/bin
@@ -37,8 +38,10 @@ cd /var/www/odroid
 . venv/bin/activate
 pip install flask
 
-sudo wget 
+sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptivePortal
 
-
+cd CaptivePortal/
+export FLASK_APP=__init__.py
+python3/main.py
 
 
