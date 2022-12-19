@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#install CaptivePortal directory
+
 
 #install apache2 and pip
 sudo apt install apache2 -y
@@ -12,6 +14,9 @@ sudo mkdir odroid
 #install python-3-venv inside piapp
 cd odroid/
 sudo apt install python3-venv -y
+cd
+
+#move directory
 
 
 #make venv directory and install activate_this.py from gitlab
@@ -38,10 +43,18 @@ cd /var/www/odroid
 . venv/bin/activate
 pip install flask
 
-sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptivePortal
+sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptivePortal/__init__.py
 
-cd CaptivePortal/
+sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptivePortal/homepage.py
+
+sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptivePortal/landingpage.py
+
+sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptivePortal/multimedia_connected.py
+
+sudo wget https://gitlab.fdmci.hva.nl/fys-cs/2223/ic102/ic102-c/fys.git/CaptivePortal/multimedia_disconnected.py
+
+
 export FLASK_APP=__init__.py
-python3/main.py
+python3 main.py
 
 
